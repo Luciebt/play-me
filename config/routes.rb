@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
   resources :instruments, only: [:destroy]
   resources :bookings, only: [:show]
-  resources :review, only: [:destroy]
+  resources :reviews, only: [:destroy]
 end
