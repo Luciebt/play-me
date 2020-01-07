@@ -20,6 +20,7 @@ class InstrumentsController < ApplicationController
       redirect_to instrument_path(@instrument)
     else
       render :edit
+    end
   end
 
   def create
