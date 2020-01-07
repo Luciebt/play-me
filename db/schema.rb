@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2020_01_04_145432) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "instruments", force: :cascade do |t|
+    t.string "name"
+    t.string "photo"
+    t.text "description"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
