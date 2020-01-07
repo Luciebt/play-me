@@ -11,7 +11,7 @@ class InstrumentsController < ApplicationController
     authorize @instrument
     @instrument = Instrument.new
   end
-
+Instrument
   def edit
     authorize @instrument
   end
@@ -28,6 +28,7 @@ class InstrumentsController < ApplicationController
   def create
     authorize @instrument
     @instrument = Instrument.new(instrument_params)
+
     if @instrument.save
       redirect_to instrument_path(@instrument)
     else
