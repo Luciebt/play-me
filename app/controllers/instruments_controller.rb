@@ -11,7 +11,7 @@ class InstrumentsController < ApplicationController
     authorize @instrument
     @instrument = Instrument.new
   end
-Instrument
+
   def edit
     authorize @instrument
   end
@@ -23,6 +23,7 @@ Instrument
       redirect_to instrument_path(@instrument)
     else
       render :edit
+    end
   end
 
   def create
@@ -46,7 +47,6 @@ Instrument
   private
 
   def instrument_params
-    params.require(:instrument).permit(
-      :name, :photo, :description, :price)
+    params.require(:instrument).permit(:name, :photo, :description, :price)
   end
 end
