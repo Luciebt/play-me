@@ -10,7 +10,7 @@ class InstrumentsController < ApplicationController
   def new
     @instrument = Instrument.new
     authorize @instrument
-    @categories = Instrument.categories
+    @categories = Instrument.categories.keys
   end
 
   def edit
@@ -28,8 +28,9 @@ class InstrumentsController < ApplicationController
   end
 
   def create
-    authorize @instrument
     @instrument = Instrument.new(instrument_params)
+    @instrument.user_id = current_user.id
+    authorize @instrument
 
     if @instrument.save
       redirect_to instrument_path(@instrument)
@@ -48,6 +49,6 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:name, :photo, :description, :price)
+    params.require(:instrument).permit(:name, :photo, :description, :price, :category, :city)
   end
 end

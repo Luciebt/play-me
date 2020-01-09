@@ -3,7 +3,6 @@ class Instrument < ApplicationRecord
   has_many :bookings
   has_many :reviews
   belongs_to :user
-  belongs_to :category
 
   enum category: [:strings, :keys, :woodwinds, :brass, :percussion]
 end
