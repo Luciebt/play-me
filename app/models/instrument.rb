@@ -1,12 +1,9 @@
 class Instrument < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   has_many :bookings
-  # has_many :reviews
+  has_many :reviews
   belongs_to :user
+  belongs_to :category
 
-  # CATEGORIES = ['Strings', 'Keys', 'Woodwinds', 'Brass', 'Percusion'].freeze
-
-  # def self.categories
-  #   ['Strings', 'Keys', 'Woodwinds', 'Brass', 'Percusion']
-  # end
   enum category: [:strings, :keys, :woodwinds, :brass, :percussion]
 end

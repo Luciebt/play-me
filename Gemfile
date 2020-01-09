@@ -8,7 +8,13 @@ gem 'puma'
 gem 'rails', '5.2.4.1'
 gem 'redis'
 gem 'devise'
+<<<<<<< HEAD
 gem 'pundit'
+=======
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+>>>>>>> add-cloudinary
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
