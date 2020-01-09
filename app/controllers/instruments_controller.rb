@@ -8,8 +8,9 @@ class InstrumentsController < ApplicationController
   end
 
   def new
-    authorize @instrument
     @instrument = Instrument.new
+    authorize @instrument
+    @categories = Instrument.categories
   end
 
   def edit
