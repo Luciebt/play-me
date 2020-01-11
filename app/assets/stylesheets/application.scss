@@ -10,6 +10,10 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/_navbar.scss";
+@import "components/_avatar.scss";
+@import "components/_links.scss";
+@import "components/_alert.scss";
 @import "pages/index";
 @import "pages/login";
 @import "pages/show";
