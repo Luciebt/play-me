@@ -54,12 +54,27 @@ a {
   transition: background 0.3s ease;
 }
 
-.container {
-  width: 900px;
-  margin: auto;
+.custom-container {
+  position: absolute;
+  width: 400px;
+  border: 0.3px solid;
+  border-color: black;
+  background-color: black;
+  bottom: 20px;
+  right: 900px;
+  opacity: 0.7;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 80px;
 }
 
-.container h2 {
+.custom-container h4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.custom-container h2 {
   color: black;
   font-size: 38px;
   font-weight: bold;
@@ -67,7 +82,7 @@ a {
   align-items: center;
   margin-top: 60px;
   margin-bottom: 60px;
-}
+
 
 .text-center {
 text-align: center;
