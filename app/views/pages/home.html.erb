@@ -1,7 +1,37 @@
+<html>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://miro.medium.com/max/1440/0*s9IfCulpLHmTdB-2.jpg);">
-  <div class="container">
-    <h1>Play Me <strong>♫ enabling Musicians</strong></h1>
-    <p>Borrow & play the instrument of your choice!</p>
-    <a class="btn btn-flat" href="http://localhost:3000/users/sign_up">Sign me up ♫</a>
+  <div class="custom-container">
+    <h4>Borrow and play the instrument of your choice!</h4>
+ <div class="text-block">
+<form action="/forms.php" method="post">
+Location:<br>
+<div>
+  <input type="text" name="City" id="Example1"><br>
+</div>
+ Date:<br>
+  <input type="text" name="Time" id="Example2">
+<br>
+Category:<br>
+<select name="Category"><br>
+  <option value="String">String</option>
+  <option value="Keyboard">Keyboard</option>
+  <option value="Percussion">Percussion</option>
+  <option value="Woodwinds">Woodwinds</option>
+  <option value="Brass">Brass</option>
+  <option value="Other">Other</option>
+</select>
+<br>
+Instrument:<br>
+<select onchange="JavaScript: showAppropriateForm( this.value );">
+  <option value="Model 1">Model 1</option>
+  <option value="Model 2">Model 2</option>
+</select>
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</p>
+  </div>
   </div>
 </div>
+</html>
