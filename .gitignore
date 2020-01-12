@@ -12,6 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/pids
+
 
 # Ignore uploaded files in development
 /storage/*
@@ -39,5 +41,6 @@ yarn-debug.log*
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
+.env*
 .env*
 .env*

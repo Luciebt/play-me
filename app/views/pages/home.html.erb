@@ -1,37 +1,77 @@
+<!DOCTYPE html>
 <html>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://miro.medium.com/max/1440/0*s9IfCulpLHmTdB-2.jpg);">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My landing page</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="headerdiv">
+      <div class="banner" style="background-image: url(https://miro.medium.com/max/1440/0*s9IfCulpLHmTdB-2.jpg)">
+    <div>
+      <h2>Play your favorite instrument at any time.</h2>
+      <br>
+      <a href="http://localhost:3000/users/sign_in" class="btn-ctr">Browse all instruments</a>
+    </div>
+  </div>
+  </div>
+
+
+    <div class="container">
+    <h2 class="text-center">Popular instruments</h2>
+    <div class="cards">
+
+      <a href="http://localhost:3000/instruments?q=cello" class="card">
+        <img src="https://www.euro-unit.com/images/stories/virtuemart/product/student_cello_01.png" alt="" class="card-image">
+        <h4>The Cello</h4>
+        <p>Play the most romantic instrument of them all</p>
+      </a>
+
+      <a href="http://localhost:3000/instruments?q=piano" class="card">
+        <img src="https://www.kawai.de/grafik/sk6l.png" alt="" class="card-image">
+        <h4>The Piano</h4>
+        <p>Produce the sound of an entire orchestra</p>
+      </a>
+
+      <a href="http://localhost:3000/instruments?q=guitar" class="card">
+        <img src="https://www.musicgooddeal.com/45262-thickbox_default/lag-tkt150e-tiki-uku-mini-guitar-acoustic-electric.jpg" alt="" class="card-image">
+        <h4>The Guitar</h4>
+        <p>Be the star of the show at any time</p>
+      </a>
+
+    </div>
+  </div>
+
   <div class="container">
-    <h4>Borrow and play the instrument of your choice!</h4>
- <div class="text-block">
-<form action="/forms.php" method="post">
-Location:<br>
-<div>
-  <input type="text" name="City" id="Example1"><br>
-</div>
- Date:<br>
-  <input type="text" name="Time" id="Example2">
-<br>
-Category:<br>
-<select name="Category"><br>
-  <option value="String">String</option>
-  <option value="Keyboard">Keyboard</option>
-  <option value="Percussion">Percussion</option>
-  <option value="Woodwinds">Woodwinds</option>
-  <option value="Brass">Brass</option>
-  <option value="Other">Other</option>
-</select>
-<br>
-Instrument:<br>
-<select onchange="JavaScript: showAppropriateForm( this.value );">
-  <option value="Model 1">Model 1</option>
-  <option value="Model 2">Model 2</option>
-</select>
-<br>
-<br>
-<input type="submit" value="Submit">
-</form>
-</p>
+    <div class="cards">
+
+      <a href="http://localhost:3000/instruments?q=drums" class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/04/07/05/20/drum-1313279_960_720.png" alt="" class="card-image">
+        <h4>The Drums</h4>
+        <p>Learn to make noise in a rythmic manner</p>
+      </a>
+
+      <a href="http://localhost:3000/instruments?q=violin" class="card">
+        <img src="https://1zvq3i19qvj53cofb61oncb1-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/0000997_palatino-ppsi-035vn-44-violin.png" alt="" class="card-image">
+        <h4>The Violin</h4>
+        <p>Become the soloist you always wanted to be</p>
+      </a>
+
+      <a href="http://localhost:3000/instruments?q=sax" class="card">
+        <img src="https://www.mmc-music.de/images/categories/ALT1.png" alt="" class="card-image">
+        <h4>The Sax</h4>
+        <p>Show the world how to jazz</p>
+      </a>
+    </div>
+    <h2 class="text-center">How it works</h2>
+    <p class="text-center">Instruments are usually rather expensive. Now how great would it be if you
+    could easily play any instrument you want? <a href="http://localhost:3000/users/sign_in">Sign up here</a>,
+     join our community of musicians and borrow the instrument you like at any given time!</p>
   </div>
-  </div>
-</div>
+</body>
 </html>
