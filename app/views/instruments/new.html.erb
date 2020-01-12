@@ -1,11 +1,3 @@
-<%= simple_form_for @instrument do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :category, collection: @categories %>
-  <%= f.input :name, label: "What is your instrument", :label_html => { :class => "label-css"} %>
-  <%= f.input :photo, label: "Add a pic for your instrument" %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.input :description, label: "Describe your instrument in few words" %>
-  <%= f.input :city, label: "Add city" %>
-  <%= f.input :price, label: "Price per day in €" %>
-  <%= f.submit 'Save' %>
-<% end %>
+<%= render "instrument_form.html.erb" %>
+
+

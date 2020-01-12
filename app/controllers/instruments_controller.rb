@@ -1,10 +1,12 @@
 class InstrumentsController < ApplicationController
   def index
     @instruments = Instrument.all
+    authorize @instruments
   end
 
   def show
     @instrument = Instrument.find(params[:id])
+    authorize @instrument
   end
 
   def new
@@ -14,13 +16,15 @@ class InstrumentsController < ApplicationController
   end
 
   def edit
+    @instrument = Instrument.find(params[:id])
+    @categories = Instrument.categories.keys
     authorize @instrument
   end
 
   def update
-    authorize @instrument
     @instrument = Instrument.find(params[:id])
-    if @instrument.update(params[:instrument])
+    authorize @instrument
+    if @instrument.update(instrument_params)
       redirect_to instrument_path(@instrument)
     else
       render :edit
@@ -40,10 +44,10 @@ class InstrumentsController < ApplicationController
   end
 
   def destroy
-    authorize @instrument
     instrument = Instrument.find(params[:id])
+    authorize instrument
     instrument.destroy
-    redirect_to instrument_path(instrument)
+    redirect_to instruments_path
   end
 
   private
