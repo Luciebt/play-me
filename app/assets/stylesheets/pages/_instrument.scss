@@ -1,30 +1,120 @@
+.new-container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 740px;
+  height: 1150px;
+  border-radius: 10px;
+  box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.10);
+}
 .newer-container {
   width: 600px;
 }
 
-.new-container {
+.add-instrument {
+  text-align: left;
+  display: inline;
+  line-height: 40px;
+  vertical-align: text-top;
+  width: 600px;
+  margin-top: 70px;
+}
+
+.form-control {
+  text-align: left;
+  font-size: 15px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+label {
   position: relative;
-  margin: 0 auto;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.strong {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.h6 {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.text {
+  display: block;
+  line-height: 40px;
+  vertical-align: text-top;
 }
 
 .cute-button {
-  margin: 5px auto;
+  margin: 25px auto;
+  font-weight: 350;
   border-radius: 5px; /* Green */
-  padding: 9px 1px;
   text-align: center;
   display: inline-block;
   font-size: 15px;
   background-color: black;
   color: white;
-  min-width: 600px;
+  min-width: 130px;
+  padding: 10px;
+  padding-right: 35px;
+  background-image: url("https://i.ibb.co/64gMYcz/right.png");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 90px;
 }
 
-input[type='file']{
-
-  color:black;
-  font-size:15px;
+.rolling-button {
+  padding-left: 470px;
 }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+
+
+input[type='file']::-webkit-file-upload-button
+{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 140px;
+  font-weight: 200;
+  opacity: 90%;
+  color: black;
+  border-radius: 5px;
+  background-color: #EAEAEA;
+  box-shadow: 0;
+  border-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  background-image: url("https://i.ibb.co/9nFbTD1/upload-1.png");
+  background-size: 20px;
+  padding-left: 37px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 15px;
+  background-padding: 30px;
+}
+
