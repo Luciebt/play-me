@@ -1,7 +1,6 @@
 class InstrumentsController < ApplicationController
   def index
-    @instruments = Instrument.all
-    authorize @instruments
+    @instruments = policy_scope(Instrument.all)
   end
 
   def show
