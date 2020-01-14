@@ -1,16 +1,21 @@
 <div class="registration-container">
 
-  <div class="title">
-    <h2>Log in</h2>
-  </div>
+  <div class=“text-block”>
+
+    <div class="title">
+      <h4>Log in to see more</h4>
+      <h10> To keep connected kindly enter the login details in the below fields.</h10>
+    </div>
+
+  <br>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
-    <%= f.input :email,
+    <%= f.input :email, placeholder: "Email",
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
+    <%= f.input :password, placeholder: "Password",
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
     <div class="form-check-label">
@@ -19,10 +24,10 @@
   </div>
 
   <div class="form-actions-two buttons-center">
-    <%= f.button :submit, "Log in", class: "button-width button-black" %>
+    <%= f.button :submit, "Sign in", class: "button-width button-black" %>
     <%= render "devise/shared/links" %>
   </div>
-
   <% end %>
+  </div>
 
 </div>
