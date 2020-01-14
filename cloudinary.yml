@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dj1gs8bsd
+  api_key: '455686482747558'
+  api_secret: txqEpPdyaqrNf1U3_CVnmFUw4VY
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dj1gs8bsd
+  api_key: '455686482747558'
+  api_secret: txqEpPdyaqrNf1U3_CVnmFUw4VY
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dj1gs8bsd
+  api_key: '455686482747558'
+  api_secret: txqEpPdyaqrNf1U3_CVnmFUw4VY
+  enhance_image_tag: true
+  static_file_support: false
