@@ -1,27 +1,27 @@
-    <div class="container">
+<div class="container">
 
-      <h3>Browse Instruments</h3>
+  <h3>Browse Instruments</h3>
 
-        <%= link_to "Piano", instruments_path(@piano), class: 'button' %><br />
+  <%= link_to "View all", instruments_path, class: 'cute-button' %>
+  <% Instrument.categories.keys.each do |category| %>
+    <%= link_to category, instruments_path(query: category), class: 'cute-button' %>
+  <% end %>
+ <br />
 
-      <div class="index-show-flex">
-          <% @instruments.each do |instrument| %>
-          <div class="index-card-infos">
 
+  <div class="index-show-flex">
 
-          <h5>
-
-            <%= link_to "#{instrument.name.capitalize}", instruments_path(@instrument) %><br />
-
-          </h5>
-          <br>
-          <div class="search-img">
-              <%= cl_image_tag instrument.photo, brightness: 30, radius: 20, width: 100, height: 100, crop: :thumb %>
-          </div>
-          <p>City: <%= instrument.city %></p>
-          <br>
-          <p>Price: <%= instrument.price %></p>
-          </div>
-        <% end %>
-       </div>
-    </div>
+    <% @instruments.each do |instrument| %>
+      <div class="index-card-infos">
+        <h5><%= link_to "#{instrument.name.capitalize}", instrument_path(instrument) %></h5>
+        <br>
+        <div class="search-img">
+          <%= cl_image_tag instrument.photo, brightness: 30, radius: 20, width: 100, height: 100, crop: :thumb %>
+        </div>
+        <p>City: <%= instrument.city %></p>
+        <br>
+        <p>Price: <%= instrument.price %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

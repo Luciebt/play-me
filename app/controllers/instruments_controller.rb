@@ -1,6 +1,10 @@
 class InstrumentsController < ApplicationController
   def index
-    @instruments = policy_scope(Instrument.all)
+    if params[:query].present?
+      @instruments = policy_scope(Instrument.where(category: params[:query]))
+    else
+      @instruments = policy_scope(Instrument.all)
+    end
   end
 
   def show
@@ -11,7 +15,7 @@ class InstrumentsController < ApplicationController
   def new
     @instrument = Instrument.new
     authorize @instrument
-    @categories = Instrument.categories.keys
+    @categories = Instrument.categories
   end
 
   def edit
