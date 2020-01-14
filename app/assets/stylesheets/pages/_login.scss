@@ -1,8 +1,14 @@
 .title {
+  margin-top: 65px;
+  text-align: left;
+  width: 400px;
+}
+
+.h4 {
   text-align: left;
 }
 
-.h2 {
+.p {
   text-align: left;
 }
 .form-inputs {
@@ -55,17 +61,59 @@ input {
 
 .registration-container {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: -1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    width: 530px;
+    height: 600px;
+    border-radius: 15px;
+    padding: auto;
+    box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.10);
 }
 
 .forgot-password {
     margin-bottom: 200px;
-    color: #7C7C7C;
+    margin-top: -15px;
+    color: #046e7d;
+    visibility: visible;
+    font-size: 14px;
 }
 
 .form-check-label {
     color: black;
+    margin-top: -20px;
+    text-weight: 400;
+}
+
+.form-check {
+  margin-top: 20px;
+  color: black;
+}
+
+.input {
+  visibility: hidden;
+}
+
+.form-control {
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  position: relative;
+}
+
+.h10 {
+  color: #EAEAEA;
 }
