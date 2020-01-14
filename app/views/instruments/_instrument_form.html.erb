@@ -13,11 +13,7 @@
     <%= f.error_notification %>
     <div class=hey-ho>
       <h6><strong>Category</strong></h6>
-    <%= f.input :category, label: "First, let’s narrow things down", collection: @categories %>
-    </div>
-    <div class=name-class>
-      <h6><strong>Instrument</strong></h6>
-    <%= f.input :category, label: "Now choose an instrument type", collection: @categories %>
+    <%= f.input :category, label: "First, let’s narrow things down", collection: @categories.keys.to_a %>
     </div>
     <div class="pls-work">
       <h6><strong>Name your place</strong></h6>

@@ -1,0 +1,57 @@
+.container > h3 {
+  text-align: center;
+}
+
+
+.container > h5 {
+  text-align: center;
+  font-size: bold;
+}
+
+.index-show-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.index-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.search-img {
+  margin: 12px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.index-card h2 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.index-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.index-card-infos {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  background-color: white;
+  justify-content: flex-start;
+  max-width: 290px;
+  padding: 18px;
+  margin: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
