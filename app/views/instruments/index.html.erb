@@ -9,7 +9,7 @@
 <div class="index-container">
   <div class="box">
     <% @instruments.each do |instrument| %>
-    <div class="card">
+    <div class="moving-card">
       <div class="imgBx">
         <%= link_to (cl_image_tag instrument.photo), instrument_path(instrument) %>
       </div>
