@@ -11,7 +11,7 @@
     <% @instruments.each do |instrument| %>
     <div class="card">
       <div class="imgBx">
-        <%= cl_image_tag instrument.photo %>
+        <%= link_to (cl_image_tag instrument.photo), instrument_path(instrument) %>
       </div>
       <div class="details">
       <h2>City: <%= instrument.city %><br>
