@@ -1,27 +1,24 @@
-<div class="container">
-
+<div class="browse-bar">
   <h3>Browse Instruments</h3>
-
   <%= link_to "View all", instruments_path, class: 'cute-button' %>
   <% Instrument.categories.keys.each do |category| %>
     <%= link_to category, instruments_path(query: category), class: 'cute-button' %>
   <% end %>
- <br />
+</div>
 
-
-  <div class="index-show-flex">
-
+<div class="index-container">
+  <div class="box">
     <% @instruments.each do |instrument| %>
-      <div class="index-card-infos">
-        <h5><%= link_to "#{instrument.name.capitalize}", instrument_path(instrument) %></h5>
-        <br>
-        <div class="search-img">
-          <%= cl_image_tag instrument.photo, brightness: 30, radius: 20, width: 100, height: 100, crop: :thumb %>
-        </div>
-        <p>City: <%= instrument.city %></p>
-        <br>
-        <p>Price: <%= instrument.price %></p>
+    <div class="card">
+      <div class="imgBx">
+        <%= cl_image_tag instrument.photo %>
       </div>
+      <div class="details">
+      <h2>City: <%= instrument.city %><br>
+      <span>Price: <%= instrument.price %></span>
+      </h2>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
