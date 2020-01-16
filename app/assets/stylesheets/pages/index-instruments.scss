@@ -8,6 +8,10 @@
   }
 
 .browse-bar, h3 {
+  text-align: center;
+  font-size: 32px;
+  margin: 3%;
+}
 
 .container > h3 {
   text-align: center;
@@ -27,10 +31,10 @@
   }
 
 .index-button {
-  margin: 25px auto;
+  margin: 0 auto;
   font-weight: 350;
-  border-radius: 5px; /* Green */
-  text-align: center;
+  border-radius: 5px;
+  /*Green*/text-align: center;
   display: inline-block;
   font-size: 15px;
   font-weight: bold;
@@ -47,7 +51,9 @@
 
 .nav-buttons {
   display: flex;
+  justify-content: space-evenly;
   margin: 0 auto;
+  margin-bottom: 3%;
 }
 
 .moving-card {
@@ -58,6 +64,8 @@
   margin: 0 auto;
   border-radius: 4px;
   box-shadow:0 2px 10px rgba(0,0,0,.2);
+  margin-bottom: 6%;
+  margin-top: 6%;
 }
  .moving-card:before,
  .moving-card:after
@@ -131,4 +139,3 @@
   display: block;
   margin-top: 5px;
    }
-  }

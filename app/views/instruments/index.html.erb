@@ -1,10 +1,8 @@
 <div class="browse-bar">
   <h3>Browse Instruments</h3>
-
- <div class="nav-buttons">
-  <%= link_to "View all", instruments_path, class: 'index-button' %>
-
-  <% Instrument.categories.keys.each do |category| %>
+    <div class="nav-buttons">
+    <%= link_to "View all", instruments_path, class: 'index-button' %>
+    <% Instrument.categories.keys.each do |category| %>
     <%= link_to category.capitalize, instruments_path(query: category), class: 'index-button' %>
   <% end %>
 </div>
@@ -20,8 +18,7 @@
         <h2>City: <%= instrument.city %><br>
          <span>Price: <%= instrument.price %></span></h2>
        </div>
-        <br />
       </div>
-    </div>
     <% end %>
- </div>
+  </div>
+</div>
