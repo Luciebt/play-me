@@ -1,3 +1,4 @@
+
 .index-container {
     display: flex;
     justify-content:center;
@@ -7,6 +8,13 @@
   }
 
 .browse-bar, h3 {
+  
+.container > h3 {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.container > h5 {
   text-align: center;
 }
 
@@ -17,6 +25,30 @@
   grid-gap: 15px;
   margin: 0 auto;
   }
+  
+.index-button {
+  margin: 25px auto;
+  font-weight: 350;
+  border-radius: 5px; /* Green */
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  min-width: 100px;
+  padding: 10px;
+  transition: background 0.3s ease;
+  &:hover {
+    color: #6c2026;
+    background-color: white;
+  }
+}
+
+.nav-buttons {
+  display: flex;
+  margin: 0 auto; 
+}
 
 .moving-card {
   position: relative;
@@ -27,8 +59,8 @@
   border-radius: 4px;
   box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
-  .moving-card:before,
-  .moving-card:after
+ .moving-card:before,
+ .moving-card:after
   {
     content:"";
     position: absolute;
@@ -41,15 +73,15 @@
     transition: 0.5s;
     z-index:-1;
   }
-  .moving-card:hover:before{
+ .moving-card:hover:before{
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
   }
-  .moving-card:hover:after{
+ .moving-card:hover:after{
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
   }
-  .moving-card .imgBx{
+.moving-card .imgBx{
   position: absolute;
   top: 10px;
   left: 10px;
@@ -60,12 +92,12 @@
   z-index: 1;
   }
 
-  .moving-card:hover .imgBx
+.moving-card:hover .imgBx
   {
     bottom: 80px;
   }
 
-  .moving-card .imgBx img{
+.moving-card .imgBx img{
       position: absolute;
       top: 0;
       left: 0;
@@ -99,3 +131,4 @@
   display: block;
   margin-top: 5px;
    }
+  

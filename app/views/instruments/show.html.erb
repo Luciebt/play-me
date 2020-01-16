@@ -8,7 +8,7 @@
       <%= cl_image_tag @instrument.photo, brightness: 30, radius: 20, width: 300, height: 300, crop: :thumb %>
         <div class="card-product-infos">
           <h4><%= @instrument.name.capitalize %></h4>
-          <h6><%= @instrument.category %></h6>
+          <h6><%= @instrument.category.capitalize %></h6>
             <p>
               <%= @instrument.description %>
             </p>
@@ -18,12 +18,16 @@
           <h5>
             Price per day: <%= @instrument.price %>€
           </h5>
-        <button type="btn btn-success">Booking button</button>
+
+          <button id="button-with-margin" class="index-button">Book this instrument</button>
+
       </div>
     </div>
   </div>
+    <div class="card-product">
+      <h3>Reviews</h3>
+      <p>we can hard code reviews here</p>
+  </div>
 </div>
 
-  <div class="show-booking">
-  </div>
 </div>

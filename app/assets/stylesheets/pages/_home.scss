@@ -11,23 +11,26 @@ h1, h2, h3, h4 {
   font-family: Poppins;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 /* Custom design below! */
 .banner {
   background-image: brightness(50%);
   background-position: center;
-  height: 500px;
+  height: 100vh;
+  margin-top: -14px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  text-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
 }
+
 .btn-ctr {
-  color: white;
+  text-decoration: none !important;
+  color: white !important;
   padding: 15px 25px;
   border-radius: 8px;
   font-weight: bold;
@@ -42,7 +45,7 @@ a {
   text-decoration: none;
 }
 .container {
-  width: 900px;
+  width: 100vh;
   margin: auto;
 }
 .container h2 {
@@ -54,6 +57,7 @@ a {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+
 .text-center {
 text-align: center;
 }
@@ -83,8 +87,28 @@ text-align: center;
   object-fit: cover;
 }
 .cards {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
+.how-it-works-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15%;
+}
+
+.how-it-works-card {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.saxophonist {
+  text-align: center;
+}
+
+#signup {
+  text-align: center;
+  margin-top: 12%;
+}
