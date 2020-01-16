@@ -8,7 +8,9 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+    @booking = Booking.new(booking_params)
+    @instrument = Instrument.find(params[:id])
+    @booking.instrument = @instrument
   end
 
   def create
@@ -24,7 +26,7 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(
-      :location, :start_date, :end_date
+      :location, :start_date, :end_date, :instrument
     )
   end
 end
