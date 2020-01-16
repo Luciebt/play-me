@@ -1,1 +1,28 @@
-<h1>CA MARCHE OU PAS?</h1>
+<div class="new-container">
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <div class="add-instrument">
+    <h5> <strong> Book this instrument </strong> </h5>
+  </div>
+  <br>
+
+  <div class="newer-container">
+
+    <%= simple_form_for [@instrument, @booking], url: instrument_bookings_path do |f| %>
+    <%= f.error_notification %>
+
+    <div class="hey-ho">
+        <%= f.input :start_date %>
+    </div>
+
+    <div class="pls-work">
+    <%= f.input :end_date, as: :date %>
+    </div>
+
+    <div class="rolling-button">
+    <%= f.submit 'Publish', class: "cute-button" %>
+  </div>
+  <% end %>
+</div>
+</div>
