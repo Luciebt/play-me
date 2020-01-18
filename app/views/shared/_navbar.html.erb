@@ -12,7 +12,7 @@
       <%= form_tag instruments_path, method: :get, class: "simple-form" do %>
         <%= text_field_tag :query,
           params[:query],
-          placeholder: "Try searching for 'piano'",
+          placeholder: "Search for 'London' or 'piano'",
           class: "here"
         %>
         <%= submit_tag "Search", class: "btn-flat" %>
