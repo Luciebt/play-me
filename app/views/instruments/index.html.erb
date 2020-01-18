@@ -3,7 +3,7 @@
     <div class="nav-buttons">
     <%= link_to "View all", instruments_path, class: 'index-button' %>
     <% Instrument.categories.keys.each do |category| %>
-    <%= link_to category.capitalize, instruments_path(query: category), class: 'index-button' %>
+    <%= link_to category.capitalize, instruments_path(filter_by: category), class: 'index-button' %>
   <% end %>
 </div>
 
