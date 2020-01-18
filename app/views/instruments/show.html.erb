@@ -19,7 +19,7 @@
             Price per day: <%= @instrument.price %>€
           </h5>
           <div id="button-with-margin">
-          <%= link_to "Book this instrument", new_instrument_booking_path, { class: "index-button" } %>
+          <%= link_to "Book this instrument", new_instrument_booking_path(@instrument), { class: "index-button" } %>
           </div>
       </div>
     </div>
