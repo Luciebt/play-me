@@ -56,8 +56,14 @@ class InstrumentsController < ApplicationController
   def destroy
     instrument = Instrument.find(params[:id])
     authorize instrument
-    instrument.destroy
-    redirect_to instruments_path
+
+    if instrument.bookings.nil?
+      instrument.destroy
+      redirect_to instruments_path
+    else
+      redirect_to instruments_path
+    end
+
   end
 
   private
