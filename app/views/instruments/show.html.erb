@@ -18,17 +18,22 @@
           <h5>
             Price per day: <%= @instrument.price %>€
           </h5>
-          <% unless @instrument.user == current_user %>
-          <div id="button-with-margin">
-          <%= link_to "Delete #{@instrument.name}", instrument_path(@instrument),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %>
-          </div>
-<<<<<<< HEAD
+
+          <% if @instrument.user == current_user %>
+
+              <div id="button-with-margin">
+                <%= link_to "Delete #{@instrument.name}", instrument_path(@instrument),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+                </div>
+                <%= link_to 'Edit', edit_instrument_path(@instrument) %>
+
+              <% else %>
+
+
+
           <% end %>
-=======
-          <%= link_to 'Edit', edit_instrument_path(@instrument) %>
->>>>>>> master
+
       </div>
     </div>
   </div>
