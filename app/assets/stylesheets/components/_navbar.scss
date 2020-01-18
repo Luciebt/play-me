@@ -16,3 +16,43 @@
 .head-text {
   color: #3e4149;
 }
+
+.simple-form {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  margin: 10px auto;
+  box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+  cursor: pointer;
+  width: 400px;
+  height: 55px;
+
+}
+
+.eat-shit {
+  margin-right: 740px;
+}
+
+.shit {
+  border: hidden;
+  border-right: 5px;
+  margin-left: 14px;
+  padding: none;
+}
+
+.btn-flat {
+  background-image: url("https://i.ibb.co/418V7b8/search.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 15px;
+  display: inline-block;
+  flex-grow: 1;
+  height: 55px;
+  width: 10px;
+  margin-left: 130px;
+  line-height: 40px;
+  padding: 0 2em;
+  border: 0;
+  color: transparent;
+}
