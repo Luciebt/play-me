@@ -2,6 +2,8 @@ class InstrumentsController < ApplicationController
   def index
     if params[:query].present?
       @instruments = policy_scope(Instrument.where("name ILIKE ?", "%#{params[:query]}%"))
+    elsif params[:filter_by].present?
+      @instruments = policy_scope(Instrument.where(category: params[:filter_by]))
     else
       @instruments = policy_scope(Instrument.all)
     end
@@ -25,7 +27,7 @@ class InstrumentsController < ApplicationController
 
   def edit
     @instrument = Instrument.find(params[:id])
-    @categories = Instrument.categories.keys
+    @categories = Instrument.categories
     authorize @instrument
   end
 
