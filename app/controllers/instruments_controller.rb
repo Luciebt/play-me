@@ -45,7 +45,6 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.new(instrument_params)
     @instrument.user_id = current_user.id
     authorize @instrument
-
     if @instrument.save
       redirect_to instrument_path(@instrument)
     else
@@ -56,8 +55,7 @@ class InstrumentsController < ApplicationController
   def destroy
     instrument = Instrument.find(params[:id])
     authorize instrument
-
-    if instrument.bookings.nil?
+    if instrument.bookings.empty?
       instrument.destroy
       redirect_to instruments_path
     else
