@@ -15,30 +15,27 @@
           <h5>
             City: <%= @instrument.city %>
           </h5>
-          <h5>
+          <div id="price">
+          <h6>
             Price per day: <%= @instrument.price %>€
-          </h5>
+          </h6>
+          </div>
 
+          <div class="button-box">
           <% if @instrument.user == current_user %>
-
+              <%= link_to 'Edit', edit_instrument_path(@instrument), { class: 'index-button' } %>
               <div id="button-with-margin">
-                <%= link_to "Delete #{@instrument.name}", instrument_path(@instrument),
+                <%= link_to "Delete", instrument_path(@instrument),
                     method: :delete,
-                    data: { confirm: "Are you sure?" } %>
+                    data: { confirm: "Are you sure?" },
+                    class: 'index-button' %>
                 </div>
-                <%= link_to 'Edit', edit_instrument_path(@instrument) %>
-
               <% else %>
-
-          <% end %>
-
+                <%= link_to  "Book this instrument", new_instrument_booking_path(@instrument), { class: 'index-button' } %>
+             <% end %>
+        </div>
       </div>
     </div>
-  </div>
-
-    <div class="card-product">
-      <h3>Reviews</h3>
-      <p>we can hard code reviews here</p>
   </div>
 </div>
 </div>

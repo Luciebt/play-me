@@ -1,4 +1,4 @@
-<h3>Yey bitch! Your instrument has been successfully booked!</h3>
+<h3>Congrats! Your have successfully booked your instrument!</h3>
 
 <div class="container">
 
@@ -7,10 +7,15 @@
         <div class="card-product-infos">
           <h4><%= @booking.instrument.name.capitalize %></h4>
 
-          <h5>
+          <div id="price">
+          <h6>
             Total price: <%= @total_price %>€
-          </h5>
+          </h6>
+          </div>
+
+          <div id="contact-box">
           <%= link_to "Contact the owner", instrument_booking_path(@booking), { class: "index-button" } %>
+          </div>
       </div>
     </div>
   </div>
