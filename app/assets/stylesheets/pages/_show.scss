@@ -12,6 +12,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
+  border-radius: 2%;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
 }
 
 .card-product img {
@@ -45,6 +50,11 @@
   height: 70%;
   margin: 38px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 2%;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
 }
 
 #button-with-margin {
@@ -54,4 +64,19 @@
 .show-card {
   display: flex;
   text-align: center;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#price {
+  margin-bottom: 12%;
+}
+
+#contact-box {
+  margin-top: 62px;
+  margin-left: 32px;
 }

@@ -4,5 +4,7 @@ class Instrument < ApplicationRecord
   has_many :reviews
   belongs_to :user
 
+  validates :description, length: { maximum: 20 }
+
   enum category: [:strings, :keys, :woodwinds, :brass, :percussion]
 end
