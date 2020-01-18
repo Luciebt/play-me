@@ -19,9 +19,15 @@
     </div>
   </div>
   </div>
-
+<br>
+<br>
     <div class="container">
-    <h2 class="text-center">Popular instruments</h2>
+    <div class="text-center">
+      <h2>Popular instruments</h2>
+      <h4>Here are our most rented instruments. See what's trendy this week.</h4>
+    </div>
+    <br>
+    <br>
     <div class="cards">
 
       <a href="http://localhost:3000/instruments?utf8=✓&query=cello&commit=Search" class="card">
@@ -68,12 +74,30 @@
     </div>
 
     <div class="how-it-works-container">
-      <div class="how-it-works-card">
         <h2 class="text-center">How it works</h2>
-        <h5 class="text-center how-it-works">Instruments are usually rather expensive. Now how great would it be if you
-        could easily play any instrument you want? Join our community of musicians and borrow the instrument you like at any given time!</h5>
-        <div id="signup">
-        <%= link_to "Sign up here", new_user_registration_path, { class: "btn-ctr" } %>
+        <div class="lol">
+        <h5 class="text-center how-it-works">
+         <center>Instruments are usually rather expensive. Now how great would it be if you
+        could easily play any instrument you want? Join our community of musicians and borrow the instrument you like at any given time! </center>
+         </h5>
+       </div>
+        <div class="how-it-works-card">
+          <div class="number-a">
+          <h5><strong>Browse instruments</strong></h5>
+          <p>This a sample description. <br> Let's see if it works.</p>
+        </div>
+        <div class="number-b">
+          <h5><strong>Choose what you like</strong></h5>
+          <p>This a sample description. <br> Let's see if it works.</p>
+        </div>
+        <div class="number-c">
+          <h5><strong>Book & play</strong></h5>
+          <p>This a sample description. <br> Let's see if it works.</p>
+        </div>
+        </div>
+        <div class="good-button">
+        <div id="">
+        <%= link_to "Sign up", new_user_registration_path, { class: "btn-here" } %>
         </div>
       </div>
     </div>
@@ -84,14 +108,12 @@
 
   <div class="footer">
   <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    © 2020 playme
   </div>
 </div>
 
