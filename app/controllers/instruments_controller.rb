@@ -1,17 +1,13 @@
 class InstrumentsController < ApplicationController
   def index
     if params[:query].present?
-      @instruments = policy_scope(Instrument.where("name ILIKE ?", "%#{params[:query]}%"))
+      @instruments = policy_scope(Instrument.where("name ILIKE ?", "%#{params[:query]}%")
+        .or(Instrument.where("city ILIKE ?", "%#{params[:query]}%")))
     elsif params[:filter_by].present?
       @instruments = policy_scope(Instrument.where(category: params[:filter_by]))
     else
       @instruments = policy_scope(Instrument.all)
     end
-    # if params[:query].present?
-    #   @instruments = policy_scope(Instrument.where(category: params[:query]))
-    # else
-    #   @instruments = policy_scope(Instrument.all)
-    # end
   end
 
   def show
