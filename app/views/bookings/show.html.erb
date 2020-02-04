@@ -7,14 +7,16 @@
         <div class="card-product-infos">
           <h4><%= @booking.instrument.name.capitalize %></h4>
 
+          <hr>
+
           <div id="price">
-          <h6>
-            Total price: <%= @total_price %>€
-          </h6>
+          <h5>
+            Total price: <strong><%= @total_price %>€</strong>
+          </h5>
           </div>
 
           <div id="contact-box">
-          <%= link_to "Contact the owner", instrument_booking_path(@booking), { class: "index-button" } %>
+          <%= link_to "Contact the owner", demo_path, { class: "index-button" } %>
           </div>
       </div>
     </div>
