@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h2>Instrument</h2>
+  <h2 id="instrument-title">Instrument</h2>
 
   <div class="show-flex">
 
@@ -8,13 +8,10 @@
       <%= cl_image_tag @instrument.photo, brightness: 30, radius: 12, width: 300, height: 300, crop: :thumb %>
         <div class="card-product-infos">
           <h4><%= @instrument.name.capitalize %></h4>
+          <hr>
           <h6><%= @instrument.category.capitalize %></h6>
-            <p>
-              <%= @instrument.description %>
-            </p>
-          <h5>
-            City: <%= @instrument.city %>
-          </h5>
+          <h6><%= @instrument.description %></h6>
+          <h6>City: <%= @instrument.city %></h6>
           <div id="price">
           <h6>
             Price per day: <%= @instrument.price %>€
