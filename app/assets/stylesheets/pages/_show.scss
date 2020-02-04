@@ -1,15 +1,18 @@
+#instrument-title {
+  margin: 1em 0;
+}
+
+
 .show-flex {
   display: flex;
-
 }
 
 .card-product {
   overflow: hidden;
   margin-bottom: 5%;
   height: 380px;
-  width: 100%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   border-radius: 2%;
@@ -32,7 +35,7 @@
   margin: 0;
 }
 
-.card-product > h3 {
+.card-product>h3 {
   text-align: center;
 }
 
@@ -45,11 +48,11 @@
 }
 
 .card-product-infos {
-  padding: 28px;
+  padding: 2em;
   width: 40%;
-  height: 70%;
+  height: 82%;
   margin: 38px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 2%;
   padding-bottom: 12px;
   -webkit-border-radius: 2%;
@@ -71,13 +74,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .index-button {
+    margin: -6px 2px;
+  }
 }
 
 #price {
   margin-bottom: 12%;
-}
-
-#contact-box {
-  margin-top: 62px;
-  margin-left: 32px;
 }

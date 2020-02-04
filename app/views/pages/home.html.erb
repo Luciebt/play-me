@@ -13,7 +13,7 @@
   <div id="headerdiv">
       <div class="banner" style="background-image: url(https://miro.medium.com/max/1440/0*s9IfCulpLHmTdB-2.jpg)">
     <div>
-      <h2>Play your favorite instrument at any time.</h2>
+      <h1>Play your favorite instrument at any time.</h1>
       <br>
       <%= link_to "Browse all instruments", instruments_path, { class: "btn-ctr" } %>
     </div>
@@ -77,8 +77,8 @@
         <h2 class="text-center">How it works</h2>
         <div class="lol">
         <h5 class="text-center how-it-works">
-         <center>Instruments are usually rather expensive. Now how great would it be if you
-        could easily play any instrument you want? Join our community of musicians and borrow the instrument you like at any given time! </center>
+         Instruments are usually rather expensive. Now how great would it be if you
+        could easily play any instrument you want? Join our community of musicians and borrow the instrument you like at any given time!
          </h5>
        </div>
         <div class="how-it-works-card">
@@ -95,11 +95,7 @@
           <p>This a sample description. <br> Let's see if it works.</p>
         </div>
         </div>
-        <div class="good-button">
-        <div id="">
-        <%= link_to "Sign up", new_user_registration_path, { class: "btn-here" } %>
-        </div>
-      </div>
+          <%= link_to "Sign up", new_user_registration_path, { class: "btn-here" } %>
     </div>
     <div class="saxophonist">
     <%= image_tag 'saxophonist.png', style: 'height:120px; width:auto' %>
