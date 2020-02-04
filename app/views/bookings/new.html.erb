@@ -3,26 +3,25 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
   <div class="add-instrument">
-    <h5> <strong> Book this instrument </strong> </h5>
+    <h4><strong>Book this instrument</strong></h4>
   </div>
   <br>
 
-  <div class="newer-container">
+    <div class="newer-container">
+        <%= simple_form_for [@instrument, @booking], url: instrument_bookings_path do |f| %>
+        <%= f.error_notification %>
 
-    <%= simple_form_for [@instrument, @booking], url: instrument_bookings_path do |f| %>
-    <%= f.error_notification %>
+        <div class="hey-ho">
+            <%= f.input :start_date %>
+        </div>
 
-    <div class="hey-ho">
-        <%= f.input :start_date %>
+        <div class="pls-work">
+        <%= f.input :end_date, as: :date %>
+        </div>
+
+        <div class="rolling-button">
+        <%= f.submit 'Book', class: "index-button" %>
+      </div>
+      <% end %>
     </div>
-
-    <div class="pls-work">
-    <%= f.input :end_date, as: :date %>
-    </div>
-
-    <div class="rolling-button">
-    <%= f.submit 'Book', class: "cute-button" %>
-  </div>
-  <% end %>
-</div>
 </div>
